@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  /*width: 1200px;*/
+  font-family: "PT Sans", "Georgia", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+header {
+  height: 70px;
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navigation-item_search {
+  background: url("../images/icons/search.svg") no-repeat;
+}
+
+.navigation-item_favourite {
+  background: url("../images/icons/favourite.svg") no-repeat;
+}
+
+.main-background {
+  background-color: #82B3D3;
+  background-image: url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.advantages {
+
+}
+
+.advantages-list {
+  text-align: center;
+}
+
+.advantages-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantages-description {
+}
+
+.search {
+  text-align: center;
+}
+
+.search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.search-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.subscribe-background {
+  background-image: url("../images/subscribe-background.jpg");
+}
+
+.subscribe-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.social-icon {
+  fill: #83B3D3;
+}
+
+/*----hotels----*/
+
+.inner-header-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.inner-background {
+  background: url("../images/filter-background.jpg");
+}
+
+.breadcrumbs-link_home {
+  background: url("../images/icons/home.svg") no-repeat;
+}
+
+.hotels-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.button-layout_cards {
+  background: url("../images/card-icons.svg") no-repeat;
+}
+
+.button-layout_element {
+  background: url("../images/card-element.svg") no-repeat;
+}
+
+.button-layout_list {
+  background: url("../images/card-list.svg") no-repeat;
+}
+
+.text-color_white {
+  color: #ffffff;
+}
