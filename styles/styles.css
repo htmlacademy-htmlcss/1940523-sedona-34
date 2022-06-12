@@ -14,7 +14,6 @@
 }
 
 body {
-  /*width: 1200px;*/
   font-family: "PT Sans", "Georgia", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -44,14 +43,6 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-}
-
-.navigation-item_search {
-  background: url("../images/icons/search.svg") no-repeat;
-}
-
-.navigation-item_favourite {
-  background: url("../images/icons/favourite.svg") no-repeat;
 }
 
 .main-background {
@@ -110,11 +101,6 @@ header {
   line-height: 26px;
 }
 
-.footer a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .social-footer-list {
   list-style-type: none;
 }
@@ -124,6 +110,8 @@ header {
 }
 
 .contact-phone {
+  text-decoration: none;
+  color: inherit;
   font-size: 40px;
   line-height: 40px;
 }
@@ -178,24 +166,8 @@ header {
   list-style-type: none;
 }
 
-.button-layout_cards {
-  background: url("../images/card-icons.svg") no-repeat;
-}
-
-.button-layout_element {
-  background: url("../images/card-element.svg") no-repeat;
-}
-
-.button-layout_list {
-  background: url("../images/card-list.svg") no-repeat;
-}
-
 .hotel-results-sort {
   margin: 50px 71px 56px;
-}
-.hotel-results-list a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .hotels-filter-result {
@@ -209,6 +181,11 @@ header {
 
 .hotel-card {
   padding: 20px;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .hotel-card-title {
@@ -245,10 +222,15 @@ header {
   line-height: 36px;
 }
 
-.pagination a{
+.pagination-link{
   text-decoration: none;
 }
 
 .text-color_white {
   color: #ffffff;
+}
+
+.button {
+  text-decoration: none;
+  color: inherit;
 }
