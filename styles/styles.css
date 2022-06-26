@@ -28,6 +28,20 @@ body {
   background-color: #ffffff;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*header*/
 header {
   display: flex;
 }
@@ -40,31 +54,54 @@ header {
   flex-grow: 1;
 }
 
+.header-logo {
+  width: 140px;
+  margin: 0 30px 0 70px;
+  display: block;
+}
+
 .navigation {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 1060px;
   margin: 0 auto;
 }
 
-.navigation-logo {
-  width: 140px;
-  margin: 0 30px 0 70px;
-}
-
 .navigation-list {
-  width: 470px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navigation-user {
-  width: 300px;
-  margin-left: auto;
-  margin-right: 70px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navigation-link-user {
+  min-width: 18px;
+  min-height: 18px;
+  display: block;
+  padding: 24px 12px;
+}
+
+.navigation-link_search:after {
+  content: '';
+  display: block;
+  background: url("../images/icons/search.svg") no-repeat;
+  width: 18px;
+  height: 18px;
+}
+
+.navigation-link_favourite:after {
+  content: '';
+  display: block;
+  background: url("../images/icons/favourite.svg") no-repeat;
+  width: 18px;
+  height: 18px;
 }
 
 .navigation-link {
@@ -73,9 +110,12 @@ header {
   line-height: 26px;
   color: inherit;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
+  padding: 20px 17px;
+  display: block;
 }
+
+/*main*/
 
 .main-container {
   flex-grow: 1;
@@ -83,8 +123,9 @@ header {
 
 .main-background {
   background-color: #82B3D3;
-  background-image: url("../images/index-background.jpg");
+  background-image: url("../images/main-mask.svg"), url("../images/index-background.jpg");
   background-repeat: no-repeat;
+  background-position: bottom center, center;
   background-size: 100% auto;
 }
 
@@ -98,6 +139,21 @@ header {
   padding: 51px 0 82px 0;
 }
 
+/*advantages*/
+
+.advantages-header {
+  padding: 60px 290px 90px;
+  text-align: center;
+}
+
+.advantages-header-title {
+  margin: 0 0 31px 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .advantages-list {
   margin: 0;
   padding: 0;
@@ -107,18 +163,43 @@ header {
   flex-wrap: wrap;
 }
 
+.advantages-info {
+  padding: 92px 85px;
+}
+
+.info-icon {
+  padding: 80px 85px 81px;
+}
+
+.info-text {
+  padding: 103px 85px 102px;
+}
+
+.advantages-item:nth-child(4n + 1){
+  background-color: #82B3D3;
+}
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+  margin: 0 0 30px 0;
 }
 
 .advantages-item {
   width: 400px;
+  display: flex;
+  justify-content: center;
 }
 
-.advantages-item_full {
+.item-full {
   width: 100%;
+  flex-direction: row;
+  color: #ffffff;
+}
+
+.item-full_left {
+  flex-direction: row-reverse;
 }
 
 .advantages-block {
@@ -127,6 +208,41 @@ header {
 
 }
 
+.advantages-title_house:before {
+  content: '';
+  background: url("/images/advantage-house.svg") no-repeat;
+  width: 90px;
+  height: 102px;
+  display: block;
+  position: relative;
+  left: 33%;
+}
+
+.advantages-title_food:before {
+  content: '';
+  background: url("/images/advantage-food.svg") no-repeat;
+  width: 90px;
+  height: 100px;
+  display: block;
+  position: relative;
+  left: 33%;
+}
+
+.advantages-title_souvenir:before {
+  content: '';
+  background: url("/images/advantage-souvenir.svg") no-repeat;
+  width: 90px;
+  height: 100px;
+  display: block;
+  position: relative;
+  left: 33%;
+}
+
+.advantages-description {
+  margin: 30px 0 0 0;
+}
+
+/*search-form*/
 .block-image {
   flex-direction: row;
 }
@@ -140,16 +256,21 @@ header {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  padding: 92px 0 30px;
 }
 
 .search-description {
   font-size: 22px;
   line-height: 26px;
+  margin: 0 0 56px;
+  padding: 0 300px;
 }
+
+/*subscribe*/
 
 .subscribe {
   text-align: center;
-  padding: 94px 200px;
 }
 
 .subscribe-background {
@@ -162,6 +283,9 @@ header {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 94px;
 }
 
 .subscribe-description {
@@ -169,10 +293,12 @@ header {
   line-height: 26px;
   max-width: 476px;
   margin: 0 auto;
+  margin-bottom: 46px;
 }
 
 .subscribe-form {
-  margin-top: 46px;
+  padding-bottom: 94px;
+  font-size: 0;
 }
 
 .button-subscribe {
@@ -180,9 +306,16 @@ header {
 }
 
 .subscribe-email {
+  font-size: 18px;
+  line-height: 21px;
   min-width: 400px;
+  background: #F2F2F2;
+  border-radius: 10px 0 0 10px;
+  padding: 18px 166px 15px 22px;
+  border: none;
 }
 
+/*footer*/
 footer {
   display: flex;
   flex-direction: row;
@@ -191,6 +324,7 @@ footer {
 .footer-wrapper {
   width: 1060px;
   margin: 0 auto;
+  padding: 40px 70px 30px;
   display: flex;
   justify-content: space-between;
 }
@@ -202,6 +336,14 @@ footer {
 
 .social-footer-list {
   list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.social-footer-item {
+  margin: 13px 12px;
 }
 
 .social-icon {
@@ -244,6 +386,12 @@ footer {
   font-size: 16px;
   line-height: 21px;
   list-style-type: none;
+  padding-left: 3px;
+
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -262,6 +410,7 @@ footer {
   fill: #ffffff;
 }
 
+/*filter*/
 .hotels-filter {
   display: flex;
   justify-content: space-between;
@@ -287,26 +436,109 @@ footer {
 
 .hotels-filter-group {
   border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .hotels-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  padding-bottom: 30px;
 }
 
 .hotels-filter-list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
+.hotels-filter-item:not(:last-child){
+  margin-bottom: 15px;
+}
+
+.hotels-range-wrapper{
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 4px;
+
+}
+
+.input-range-wrapper input{
+  padding: 0;
+}
+
+.range{
+  margin: 0 auto;
+}
+
+/*сделала для примера, чтобы видеть верстку. переделаю, когда дойдем до этого раздела*/
+input[type="number"] {
+  background: none;
+  vertical-align: top;
+  outline: none;
+  padding: 0;
+  height: 48px;
+  line-height: 40px;
+  text-indent: 10px;
+  display: inline-block;
+  width: 144px;
+  box-sizing: border-box;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+input[type="number"]:focus {
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 0 0 3px #81B3D2;
+}
+
+input[type="number"]:hover {
+  border: 2px solid #FFFFFF;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/*filter results*/
 .hotel-results-sort {
-  margin: 50px 71px 56px;
+  padding: 50px 71px 56px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.button-layout_cards:before {
+  content: '';
+  display: block;
+  background: url("../images/icons/card-icons.svg") no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.button-layout_element:before {
+  content: '';
+  display: block;
+  background: url("../images/icons/card-element.svg") no-repeat;
+  width: 16px;
+  height: 14px;
+}
+
+.button-layout_list:before {
+  content: '';
+  display: block;
+  background: url("../images/icons/card-list.svg") no-repeat;
+  width: 16px;
+  height: 14px;
 }
 
 .hotel-results a {
   text-decoration: none;
-  color: inherit;
 }
 
 .hotels-filter-result {
@@ -318,6 +550,8 @@ footer {
 
 .hotels-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .button-layout {
@@ -336,7 +570,9 @@ footer {
 
 .select-control {
   width: 290px;
-  margin-right: 70px;
+  margin-right: 78px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 .hotel-card {
@@ -351,13 +587,8 @@ footer {
 .hotel-card-title {
   font-size: 24px;
   line-height: 28px;
-}
-
-.hotel-card-button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .star {
@@ -376,9 +607,23 @@ footer {
   text-transform: uppercase;
 }
 
+.dividing-line {
+  padding-top: 66px;
+  padding-bottom: 30px;
+}
+
+.dividing-line:before {
+  content: '';
+  display: block;
+  width: 100%;
+  border: 1px solid #E6E6E6;
+  transform: rotate(180deg);
+
+}
+
 .pagination {
   display: flex;
-  margin: 0 70px 0 73px;
+  align-items: baseline;
 }
 
 .pagination-list {
@@ -389,9 +634,32 @@ footer {
   display: flex;
 }
 
+.pagination-link:not(:last-child) {
+  margin-right: 8px;
+}
+.pagination-link:last-child {
+  padding: 12px 18px;
+}
+
 .pagination-link{
+  display: block;
+  box-sizing: border-box;
   width: 64px;
   height: 64px;
+  padding: 11px 23px 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: #ffffff;
+  background: #82B3D3;
+  border: 1px solid #82B3D3;
+  border-radius: 4px;
+}
+
+.pagination-current {
+  background: #F2F2F2;
+  color: #000000;
+  border: none;
 }
 
 .select-control-title {
@@ -401,26 +669,69 @@ footer {
 
 .select-control-page {
   width: 160px;
+  height: 50px;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  padding: 14px 20px;
 }
 
+/*colors*/
 .text-color_white {
   color: #ffffff;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.color-blue {
+  background-color: rgba(131, 179, 211, 0.2);
 }
 
-.button {
-  text-decoration: none;
-  color: inherit;
+.color-light-blue {
+  background-color: rgba(131, 179, 211, 0.12);
 }
+
+/*buttons*/
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #756157;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px 30px;
+}
+
+.button-header {
+  margin: 0 70px 0 20px;
+}
+
+.button-search {
+  font-size: 20px;
+  line-height: 36px;
+  padding: 10px 120px;
+  margin-bottom: 93px;
+}
+
+.button-subscribe {
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 0 10px 10px 0;
+}
+
+.button-blue {
+  background: #82B3D3;
+}
+
+.button-green {
+  background-color: #7DB54F;
+}
+
+.button-as-link {
+  background: none;
+  font-weight: 400;
+  text-transform: none;
+}
+
+
+
