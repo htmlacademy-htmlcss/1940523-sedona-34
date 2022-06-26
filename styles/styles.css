@@ -313,18 +313,15 @@ header {
   font-size: 0;
 }
 
-.button-subscribe {
-  min-width: 200px;
-}
-
 .subscribe-email {
   font-size: 18px;
   line-height: 21px;
-  min-width: 400px;
+  min-width: 600px;
   background: #F2F2F2;
   border-radius: 10px 0 0 10px;
-  padding: 18px 166px 15px 22px;
+  padding: 19px 22px 18px 22px;
   border: none;
+  box-sizing: border-box;
 }
 
 /*footer*/
@@ -601,6 +598,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .hotel-card {
   padding: 20px;
+  padding-top: 22px;
   display: grid;
   grid-template-columns: 140px 140px;
   row-gap: 16px;
@@ -656,7 +654,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .dividing-line {
   padding-top: 66px;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .dividing-line:before {
@@ -670,7 +668,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .pagination {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .pagination-list {
@@ -684,8 +682,13 @@ input[type="number"]::-webkit-inner-spin-button {
 .pagination-link:not(:last-child) {
   margin-right: 8px;
 }
+
+.pagination-link:nth-child(5) {
+  padding: 11px 20px 12px;
+}
+
 .pagination-link:last-child {
-  padding: 12px 18px;
+  padding: 12px 16px;
 }
 
 .pagination-link{
@@ -752,19 +755,23 @@ input[type="number"]::-webkit-inner-spin-button {
 .button-header {
   margin: 0 71px 0 20px;
   padding: 10px 33px;
+  display: block;
+  text-align: center;
 }
 
 .button-search {
-  font-size: 20px;
+  font-size: 17px;
   line-height: 36px;
-  padding: 10px 120px;
+  padding: 10px 150px;
   margin-bottom: 93px;
 }
 
 .button-subscribe {
-  font-size: 20px;
+  min-width: 200px;
+  font-size: 17px;
   line-height: 36px;
   border-radius: 0 10px 10px 0;
+  padding: 12px 15px 10px;
 }
 
 .button-blue {
@@ -785,6 +792,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .card-button {
   padding: 9px 15px 8px;
+  text-align: center;
 }
 
 
