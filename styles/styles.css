@@ -393,6 +393,7 @@ footer {
 
 .social-footer-link:focus > svg {
   fill: #68A2CA;
+  outline: none;
 }
 
 .social-footer-link:active > svg {
@@ -412,6 +413,7 @@ footer {
 
 .contact-phone:focus {
   color: #756157;
+  outline: none;
 }
 
 .contact-phone:active {
@@ -432,6 +434,7 @@ footer {
 
 .htmlacademy-link:focus svg {
   fill: #756157;
+  outline: none;
 }
 
 .htmlacademy-link:active svg {
@@ -473,6 +476,19 @@ footer {
 
 .breadcrumbs-link {
   text-decoration: none;
+}
+
+.breadcrumbs-link:hover {
+  opacity: 0.7;
+}
+
+.breadcrumbs-link:focus {
+  opacity: 1;
+  outline: none;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
 }
 
 .breadcrumbs-item:not(:last-child) {
@@ -744,7 +760,12 @@ footer {
 
 .range-price::-webkit-outer-spin-button,
 .range-price::-webkit-inner-spin-button {
-  display: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
 }
 
 .max {
@@ -1019,6 +1040,7 @@ footer {
 .pagination-link:focus {
   background: #68A2CA;
   border: 1px solid #82B3D3;
+  outline: none;
 }
 
 .pagination-link:active {
@@ -1043,6 +1065,7 @@ footer {
   background: #F2F2F2;
   color: #000000;
   border: 1px solid #F2F2F2;
+  outline: none;
 }
 
 .pagination-current:active {
@@ -1103,6 +1126,7 @@ footer {
 
 .button:focus {
   background-color: #615048;
+  outline: none;
 }
 
 .button:active {
@@ -1142,6 +1166,7 @@ footer {
 
 .button-blue:focus {
   background: #68A2CA;
+  outline: none;
 }
 
 .button-blue:active {
@@ -1159,6 +1184,7 @@ footer {
 
 .button-green:focus {
   background-color: #6C9E42;
+  outline: none;
 }
 
 .button-green:active {
@@ -1314,6 +1340,7 @@ footer {
   text-align: center;
   outline: none;
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
