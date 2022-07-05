@@ -380,7 +380,7 @@ footer {
 }
 
 .social-footer-item {
-  margin: 9px 12px 10px;
+  margin: 9px 13px 10px;
 }
 
 .social-footer-link > svg {
@@ -404,7 +404,7 @@ footer {
   text-decoration: none;
   color: #000000;
   font-size: 40px;
-  line-height: 35px;
+  line-height: 32px;
 }
 
 .contact-phone:hover {
@@ -541,13 +541,8 @@ footer {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input[type="checkbox"] + .control-mark:focus {
-  border: 3px solid #83B3D3;
-}
-
-.control-input[type="checkbox"] + .control-mark:focus-visible {
-  border: 3px solid #83B3D3;
-  outline: none;
+.control-input[type="checkbox"]:focus + .control-mark {
+  outline: 3px solid #83B3D3;
 }
 
 .control-input[type="checkbox"] + .control-mark:active {
@@ -578,13 +573,8 @@ footer {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.control-input[type="radio"] + .control-radio:focus {
-  border: 3px solid #83B3D3;
-}
-
-.control-input[type="radio"] + .control-radio:focus-visible {
-  border: 3px solid #83B3D3;
-  outline: none;
+.control-input[type="radio"]:focus + .control-radio {
+  outline: 3px solid #83B3D3;
 }
 
 .control-input[type="checkbox"] + .control-radio:active {
@@ -878,13 +868,21 @@ input[type='number'] {
   appearance: none;
 }
 
-.select-control:hover,
-.select-control:focus {
+.select-control:not([disabled]):hover,
+.select-control:not([disabled]):focus {
   border-color: #68A2CA;
+  outline: none;
 }
 
-.select-control:active {
+.select-control:active:not([disabled]) {
   outline: 2px solid #3F5E72;
+}
+
+.select-control[disabled],
+.select-control:disabled {
+  opacity: 0.3;
+  outline: none;
+  pointer-events: none;
 }
 
 .page-type {
@@ -1132,6 +1130,12 @@ input[type='number'] {
 .button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.button:disabled,
+.button[disabled] {
+  background-color: #E5E5E5;
+  pointer-events: none;
 }
 
 .button-header {
@@ -1440,7 +1444,7 @@ input::-webkit-inner-spin-button {
   position: relative;
 }
 
-.label-child {
+.label-child-block {
   grid-area: l_child;
   text-align: right;
   margin-right: 16px;
