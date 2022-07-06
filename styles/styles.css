@@ -43,7 +43,7 @@ body {
 }
 
 /*header*/
-header {
+.header {
   display: flex;
 }
 
@@ -245,7 +245,7 @@ header {
   height: 103px;
   display: block;
   position: relative;
-  left: 28%;
+  left: 33%;
 }
 
 .advantages-title_food:before {
@@ -353,7 +353,7 @@ header {
 }
 
 /*footer*/
-footer {
+.footer {
   display: flex;
   flex-direction: row;
 }
