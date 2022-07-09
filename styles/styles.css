@@ -513,7 +513,7 @@ body {
 .control {
   position: relative;
   display: block;
-  padding-left: 36px;
+  padding-left: 39px;
 }
 
 .control-mark {
@@ -539,6 +539,7 @@ body {
 
 .control-input[type="checkbox"] + .control-mark:hover {
   background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 
 .control-input[type="checkbox"]:focus + .control-mark {
@@ -572,6 +573,7 @@ body {
 
 .control-input[type="radio"] + .control-radio:hover {
   background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
 }
 
 .control-input[type="radio"]:focus + .control-radio {
@@ -593,7 +595,7 @@ body {
 }
 
 .filter-service {
-  margin-right: 70px;
+  margin-right: 69px;
 }
 
 .filter-type {
@@ -781,7 +783,7 @@ input[type='number'] {
 }
 
 .hotel-results-sort {
-  padding: 40px 0 55px;
+  padding: 42px 0 54px;
   display: flex;
   justify-content: space-between;
 }
@@ -928,7 +930,7 @@ input[type='number'] {
 
 .hotel-card {
   padding: 20px;
-  padding-top: 22px;
+  padding-top: 21px;
   display: grid;
   grid-template-columns: 140px 140px;
   row-gap: 16px;
@@ -976,6 +978,7 @@ input[type='number'] {
   min-height: 37px;
   font-size: 16px;
   line-height: 20px;
+  letter-spacing: -0.1px;
   text-transform: uppercase;
   background-color: #F2F2F2;
   border-radius: 4px;
@@ -1365,6 +1368,7 @@ input::-webkit-inner-spin-button {
 
 .number-button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .number-button:focus {
