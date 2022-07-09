@@ -562,10 +562,11 @@ body {
 .control-input[type="radio"]:checked + .control-radio::before {
   position: absolute;
   top: 5px;
-  left: 4px;
+  left: 5px;
   width: 10px;
   height: 11px;
-  background: url("../images/icons/dot.svg") no-repeat;
+  background-color: #3F5E72;
+  border-radius: 50%;
   content: "";
 }
 
