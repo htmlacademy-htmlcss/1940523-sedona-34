@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Каталог</title>
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -43,9 +43,7 @@
           </a>
         </li>
         <li>
-          <a class="button button-header" href="#">
-            Хочу сюда!
-          </a>
+          <a class="button button-header" href="#">Хочу сюда!</a>
         </li>
       </ul>
     </nav>
@@ -59,10 +57,9 @@
           <ol class="breadcrumbs">
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="index.html">
-                <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false"  width="13" height="12" viewBox="0 0 13 12" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M6.11426 0L0.114258 5.80006V12.0001H12.1143V5.80006L6.11426 0ZM11.1143 11.0001H1.11426V6.20005L6.11426 1.4L11.1143 6.20005V11.0001Z"/>
+                <svg class="breadcrumbs-icon" aria-hidden="true" focusable="false"  width="13" height="12"
+                     viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.11426 0L0.114258 5.80006V12.0001H12.1143V5.80006L6.11426 0ZM11.1143 11.0001H1.11426V6.20005L6.11426 1.4L11.1143 6.20005V11.0001Z"/>
                   <path d="M4.11426 10.0001H5.11426V7.50005H7.11426V10.0001H8.11426V6.50005H4.11426V10.0001Z"/>
                 </svg>
                 <span class="visually-hidden">На главную</span>
@@ -73,10 +70,8 @@
             </li>
           </ol>
         </header>
-
         <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
         <form class="hotels-filter" action="https://echo.htmlacademy.ru/" method="get">
-
             <fieldset class="hotels-filter-group filter-service">
               <legend class="hotels-filter-title">Инфраструктура:</legend>
               <ul class="hotels-filter-list">
@@ -103,7 +98,6 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="hotels-filter-group filter-type">
               <legend class="hotels-filter-title">Тип Жилья:</legend>
               <ul class="hotels-filter-list">
@@ -130,10 +124,8 @@
                 </li>
               </ul>
             </fieldset>
-
             <fieldset class="hotels-filter-group filter-price">
               <legend class="hotels-filter-title">Стоимость, ₽:</legend>
-
               <div class="hotels-range-wrapper">
                 <div class="range-input">
                   <label class="hotels-range-label">
@@ -145,7 +137,6 @@
                     <span class="range-max">до</span>
                   </label>
                 </div>
-
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 226px;">
                     <button class="range-toggle toggle-min" type="button">
@@ -158,34 +149,33 @@
                 </div>
               </div>
             </fieldset>
-
             <div class="hotels-filter-buttons">
               <button class="button button-apply button-blue" type="submit">Применить</button>
               <button class="button button-as-link" type="button">Сбросить</button>
             </div>
-
         </form>
       </div>
     </section>
     <section class="hotel-results">
       <div class="hotel-results-sort">
         <b class="hotels-filter-result">Найдено гостиниц: 38</b>
-
-        <div class= "select sorting-type">
+        <div class="select sorting-type">
           <select class="select-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
         </div>
-        <a href="#" class="card-grid-toggle grid_cards grid_current">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a href="#" class="card-grid-toggle grid_element">
-          <span class="visually-hidden">Показать один элемент</span>
-        </a>
-        <a href="#" class="card-grid-toggle grid_list">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="hotels-show-cards">
+          <a class="card-grid-toggle grid_cards grid_current" href="#">
+            <span class="visually-hidden">Показать карточки</span>
+          </a>
+          <a class="card-grid-toggle grid_element" href="#">
+            <span class="visually-hidden">Показать один элемент</span>
+          </a>
+          <a class="card-grid-toggle grid_list" href="#">
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </div>
       </div>
         <ul class="hotels-list">
           <li class="hotel-card">
@@ -275,10 +265,9 @@
           <a class="pagination-link" href="#">...</a>
           <a class="pagination-link" href="#">10</a>
         </nav>
-
         <span class="select-control-title">Гостиниц на странице:</span>
         <div class= "select page-type">
-          <select class="select-control-page" aria-label="Элементов на странице">
+          <select class="select-control" aria-label="Элементов на странице">
             <option value="four">4</option>
             <option value="five">5</option>
           </select>
@@ -290,8 +279,9 @@
       <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
       <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
       <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="subscribe-email" class="visually-hidden">Email</label>
-        <input type="email" id="subscribe-email" name="subscribe-email" class="input input-subscribe" placeholder="Ваш e-mail">
+        <label class="visually-hidden" for="subscribe-email">Email</label>
+        <input class="input input-subscribe" type="email" id="subscribe-email" name="subscribe-email"
+               placeholder="Ваш e-mail">
         <button class="button button-blue button-subscribe" type="submit">Подписаться</button>
       </form>
     </section>
