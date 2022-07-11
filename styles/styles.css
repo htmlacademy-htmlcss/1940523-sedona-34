@@ -31,7 +31,6 @@ body {
 }
 
 img {
-  display: block;
   max-width: 100%;
   object-fit: cover;
 }
@@ -234,6 +233,7 @@ img {
 }
 
 .advantages-item img{
+  display: block;
   height: 100%;
 }
 
@@ -1153,6 +1153,7 @@ input[type="number"] {
 
 .button-header {
   display: block;
+  max-width: 160px;
   margin: 0 71px 0 20px;
   padding: 9px 34px;
   text-align: center;
