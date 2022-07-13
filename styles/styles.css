@@ -155,6 +155,7 @@ img {
 
 .main-background {
   background-image: url("../images/main-mask.svg"), url("../images/index-background.jpg");
+  background-color: #40515d;
   background-repeat: no-repeat;
   background-position: bottom center, center;
   background-size: 100% auto;
@@ -320,7 +321,7 @@ img {
 }
 
 .subscribe-background {
-  background: url("../images/subscribe-background.jpg") no-repeat #000000;
+  background: url("../images/subscribe-background.jpg") #6a8394 no-repeat;
   background-size: cover;
 }
 
@@ -483,7 +484,7 @@ img {
 }
 
 .hotels-catalog {
-  background: url("../images/filter-background.jpg") no-repeat #000000;
+  background: url("../images/filter-background.jpg") #424b53 no-repeat;
   background-size: cover;
 }
 
